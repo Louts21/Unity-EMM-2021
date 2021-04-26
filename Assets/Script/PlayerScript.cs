@@ -15,15 +15,15 @@ public class PlayerScript : MonoBehaviour
         float moveVertical = Input.GetAxis("Vertical");
         Vector3 moveDirection = new Vector3(moveHorizontal, 0f, moveVertical) * _speed * Time.deltaTime;
         transform.Translate(moveDirection, Space.Self);
-        
+
         //Rotation
-        if(Input.GetKey(KeyCode.Q))
+        if (Input.GetKey(KeyCode.Q))
         {
-            transform.rotation *= Quaternion.Euler(0, -0.2f, 0);
+            transform.rotation *= Quaternion.LookRotation(new Vector3(Mathf.Sin(-0.005f), 0, Mathf.Cos(-0.005f)));
         }
-        if(Input.GetKey(KeyCode.E))
+        if (Input.GetKey(KeyCode.E))
         {
-            transform.rotation *= Quaternion.Euler(0, 0.2f, 0);
+            transform.rotation *= Quaternion.LookRotation(new Vector3(Mathf.Sin(0.005f), 0, Mathf.Cos(0.005f)));
         }
     }
 }
