@@ -31,13 +31,13 @@ public class ButtonEventHandlerScript : MonoBehaviour
 
     public void OnButtonPressedTL(VirtualButtonBehaviour vbb)
     {
-        transform.rotation *= Quaternion.LookRotation(new Vector3(Mathf.Sin(-0.005f), 0, Mathf.Cos(-0.005f)));
+        transform.rotation *= Quaternion.LookRotation(new Vector3(Mathf.Sin(-0.05f), 0, Mathf.Cos(-0.05f)));
         Debug.Log("Turn Left");
     }
 
     public void OnButtonPressedTR(VirtualButtonBehaviour vbb)
     {
-        transform.rotation *= Quaternion.LookRotation(new Vector3(Mathf.Sin(0.005f), 0, Mathf.Cos(0.005f)));
+        transform.rotation *= Quaternion.LookRotation(new Vector3(Mathf.Sin(0.05f), 0, Mathf.Cos(0.05f)));
         Debug.Log("Turn Right");
     }
 
