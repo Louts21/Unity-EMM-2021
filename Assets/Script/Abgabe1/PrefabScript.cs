@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class PrefabScript : MonoBehaviour
 {
-    // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
     {
-        transform.rotation *= Quaternion.Euler(0, 0.1f, 0);
+        transform.rotation *= Quaternion.Euler(0, 0.5f, 0);
     }
 
     private void OnTriggerEnter(Collider other)
